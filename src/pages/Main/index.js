@@ -16,9 +16,6 @@ import {
   Button,
   ImageButton,
   TextButton,
-  AksAbout7DayAdvBelieve,
-  SalvationAndService,
-  ECA,
 } from './styles';
 
 import logo from '../../assets/ld1.png';
@@ -28,6 +25,12 @@ import ss from '../../assets/ss.png';
 import eca from '../../assets/eca.png';
 
 export default class Main extends Component {
+  handleNavigate = () => {
+    const {navigation} = this.props;
+
+    navigation.navigate('AsksAbout7DayAdvBelieve');
+  };
+
   render() {
     return (
       <Container>
@@ -49,7 +52,7 @@ export default class Main extends Component {
           </Header>
 
           <Actions>
-            <Button>
+            <Button onPress={this.handleNavigate}>
               <ImageButton source={nc} />
               <TextButton>
                 Jesus, o foco central da Bíblia e da história!
